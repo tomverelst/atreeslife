@@ -1,0 +1,7 @@
+logs/*
+!../app/bower_components/angular-google-maps/src/js/directives/api/models/.gitkeep
+node_modules/
+bower_components/
+tmp
+.DS_Store
+.idea
