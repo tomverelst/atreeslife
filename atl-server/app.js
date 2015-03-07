@@ -25,33 +25,35 @@ var app = express();
 
 // Fetch all
 app.get("/memorium", function(req, res){
-
-    var first = true;
-
     res.header("Access-Control-Allow-Origin", "*");
 
-    res.write("[");
-    var stream = Memorium.find({}).stream();
-
-    stream.on("data", function(doc){
-        if(!first){
-            res.write(",");
-        }
-        first = false;
-        res.write(JSON.stringify(doc));
+    Memorium.find(function(err, items){
+        res.send(items);
     });
 
-    stream.on("error", function(err){
-        res.write("error");
-    });
-
-    stream.on("end", function(){
-        res.write("]");
-    })
-
-    stream.on("close", function(){
-        res.end();
-    });
+    //var first = true;
+    //res.write("[");
+    //var stream = Memorium.find({}).stream();
+    //
+    //stream.on("data", function(doc){
+    //    if(!first){
+    //        res.write(",");
+    //    }
+    //    first = false;
+    //    res.write(JSON.stringify(doc));
+    //});
+    //
+    //stream.on("error", function(err){
+    //    res.write("error");
+    //});
+    //
+    //stream.on("end", function(){
+    //    res.write("]");
+    //})
+    //
+    //stream.on("close", function(){
+    //    res.end();
+    //});
 });
 
 module.exports = app;
