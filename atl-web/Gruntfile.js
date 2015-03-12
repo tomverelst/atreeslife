@@ -6,13 +6,13 @@ module.exports = function(grunt){
                 options: {
                     compress: true
                 },
-                files: { "./app/styles.css": "./app/styles.less"}
+                files: { "./public/css/styles.css": "./less/styles.less"}
             }
         },
 
         watch: {
             less: {
-                files: ["./app/styles.less"],
+                files: ["./less/**/*.less"],
                 tasks: ["less"],
                 options: {
                     livereload: true

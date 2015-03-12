@@ -1,0 +1,37 @@
+@import "variables.less";
+
+.home{
+  .font-sans();
+
+  .primary {
+    background-color: @base-color;
+    color: @base-color-opposite;
+  }
+
+  .secondary {
+    background-color: @secondary-color;
+    color: @secondary-color-opposite;
+  }
+
+  .neutral {
+    background-color: @neutral-color;
+    color: @neutral-color-opposite;
+    border-bottom: darken(@neutral-color, 80%)
+  }
+
+  .neutral-darker {
+    background-color: darken(@neutral-color, 3%);
+    color: @neutral-color-opposite;
+  }
+
+}
+
+.home section{
+  padding: 4*@unit;
+}
+
+.cover .cover-card {
+  margin: 4*@unit auto;
+  background: rgba(255,255,255,0.7);
+  padding: @unit*4;
+}

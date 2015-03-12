@@ -1,0 +1,20 @@
+/* app css stylesheet */
+
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
+#map-canvas { height: 100% }
+
+/*.angular-google-map-container { height: 400px; } */
+
+.angular-google-map-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    -webkit-filter: blur(4px);
+}
+
+div {
+
+}

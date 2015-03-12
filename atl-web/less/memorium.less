@@ -1,0 +1,51 @@
+.memorium {
+  .font-sans();
+  color: @secondary-color;
+}
+
+#map-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.angular-google-map {
+  width: 100%;
+  height: 100%;
+}
+
+.angular-google-map-container {
+  width: 100%;
+  height: 100%;
+  .blur(6px);
+}
+
+.card {
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  transition: all 250ms;
+  .BoxShadowHelper(1);
+  //    &:hover {
+  //    .BoxShadowHelper(3);
+  //    -webkit-transform: translateY(-5px);
+  //    -moz-transform: translateY(-5px);
+  //    transform: translateY(-5px);
+  //  }
+}
+
+section.card {
+  margin-top: @margin-factor*@unit;
+  padding: 2*@unit;
+  background-color: @content-background;
+  @media(min-width: 32em){
+    margin-left: @margin-factor*@unit;
+    margin-right: @margin-factor*@unit;
+  }
+}
+
+section.card + section.card {
+  margin-top: (@margin-factor/2)*@unit;
+}

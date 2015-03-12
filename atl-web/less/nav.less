@@ -1,0 +1,20 @@
+@top-nav-height: @unit*4;
+
+nav.top-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999;
+  width: 100%;
+  height: @top-nav-height;
+  background-color: @base-color;
+  color: @base-color-opposite;
+}
+
+nav > ul > li {
+  float: left;
+  display: inline-block;
+  line-height: @top-nav-height;
+  padding: 0 2*@unit;
+  min-width: 100px;
+}
