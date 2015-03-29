@@ -1,20 +1,54 @@
-@top-nav-height: @unit*4;
+@import "function.less";
 
-nav.top-nav{
+.header{
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99999999999;
   width: 100%;
-  height: @top-nav-height;
-  background-color: @base-color;
-  color: @base-color-opposite;
+  height: @header-height;
+  background-color: @header-background-color;
+  color: @header-background-color-opposite;
+  .BoxShadowHelper(1);
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-nav > ul > li {
+.header-item(){
   float: left;
   display: inline-block;
-  line-height: @top-nav-height;
+  height: @header-height;
+  border-sizing: border-box;
+}
+
+.atl-logo {
+  .header-item();
+  width: 200px;
+  background: url("../img/logo-small-white.png") no-repeat;
+  color: inherit;
+}
+
+.atl-title {
+  .header-item();
+  .font-serif(40);
+}
+
+.top-nav > ul > li {
+  .header-item();
+}
+.top-nav > ul > li > a {
+  line-height: @header-height;
+  display: block;
   padding: 0 2*@unit;
-  min-width: 100px;
+  text-align: center;
+  .transform(scale(1));
+  .transition(all 0.2s ease-in-out);
+}
+
+.top-nav a:hover {
+  background-color: darken(@header-background-color, 5%);
+//  font-size: 1.05em;
+  .transform(scale(1.05));
+  .transition(all 0.2s ease-in-out);
 }

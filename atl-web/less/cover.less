@@ -1,28 +1,57 @@
-.cover{
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 300px;
-}
-
-.cover p {
-  #pxtoem > .font-size(60);
-}
-
 .first-cover{
   background:
   linear-gradient(
-          rgba(0, 0, 0, 0.7),
-          rgba(0, 0, 0, 0.7)
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
   ),
   url("../img/Tree-cover-1.jpg") no-repeat center center fixed;
 }
 
-.second-cover{
+.second-cover {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)
   ),
   url("../img/tree-cover-2.jpg") no-repeat center center fixed;
 }
+
+.scroll-cover {
+  height: 100vh;
+  width: 100vw;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: @base-color-opposite;
+  position: relative;
+
+  padding-left: 4*@unit;
+  padding-right: 4*@unit;
+
+  &__content {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--middle {
+
+  }
+}
+
+
+
+.scroll-cover header{
+  .font-serif(180);
+  text-align: right;
+}
+
+.scroll-cover p{
+  .font-sans(60);
+}
+
+.main-content .scroll-cover:first-child{
+  box-sizing: border-box;
+  padding-top: @header-height;
+  margin-top: -@header-height;
+}
+

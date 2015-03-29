@@ -3,4 +3,4 @@
 *.iws
 *.log
 build/
-target/
+target/atl-web/fonts/

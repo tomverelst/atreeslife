@@ -1,8 +1,19 @@
+
+@font-face
+{
+  font-family: Fontin;
+  src: url('../fonts/Fontin-Regular.otf');
+}
+
+.font-size( @target: @base-font-size, @context: @base-font-size ) {
+  font-size: (@target / @context) + 0em;
+}
+
 .font-serif(@font-size: @base-font-size) {
-  font-family: 'Droid Serif', sans-serif;
-  #pxtoem > .font-size(@font-size);
+  font-family: 'Fontin';
+  .font-size(@font-size);
 }
 .font-sans(@font-size: @base-font-size){
-  font-family: 'Cinzel', sans-serif;
-  #pxtoem > .font-size(@font-size);
+  font-family: 'Fontin';
+  .font-size(@font-size);
 }

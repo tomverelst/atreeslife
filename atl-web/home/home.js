@@ -8,7 +8,7 @@ angular.module('atreeslife.home', ['ngRoute', 'ngResource'])
         }])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/home', {
-            templateUrl: '/home.html',
+            templateUrl: '/home/home.html',
             controller: 'homeController'
         });
     }])
